@@ -2,13 +2,14 @@
 
 > Update this file at the end of each Claude Code session. Keep entries short — this is a status board, not a journal. See @CLAUDE.md and @docs/design-doc.md Section 11 for the full 8-week plan this tracks against.
 
-**Last updated:** _(fill in date)_
-**Current week:** _(1–8)_
+**Last updated:** 2026-06-20
+**Current week:** 1
 
 ---
 
 ## Week 1–2 — Foundation
 
+- [x] Project skeleton: Spring Boot 3.4.1 / Java 21 target, pom.xml, Maven wrapper, package structure (`auth`, `portfolio`, `watchlist`, `marketdata`), `application.yml`, health endpoint, SecurityConfig stub, contextLoads test passing
 - [ ] Auth (Spring Security + JWT)
 - [ ] Watchlist schema + CRUD (multiple named lists)
 - [ ] Portfolio schema + CRUD (multiple named lists)
@@ -17,7 +18,7 @@
 - [ ] Live-quote endpoint (Finnhub, read-through, not persisted)
 - [ ] Dockerized
 
-**Deviations from design doc:** _(none yet)_
+**Deviations from design doc:** none
 
 ## Week 7–8 — Observability, Reliability & Polish (Core API's slice)
 
