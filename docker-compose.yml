@@ -25,6 +25,25 @@ services:
       timeout: 3s
       retries: 10
 
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@stockpeek.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    ports:
+      - "5050:80"
+    depends_on:
+      db:
+        condition: service_healthy
+
+  redis-ui:
+    image: redislabs/redisinsight:latest
+    ports:
+      - "5540:5540"
+    depends_on:
+      redis:
+        condition: service_healthy
+
   core-api:
     build: .
     ports:
