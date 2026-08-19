@@ -28,7 +28,7 @@ services:
   pgadmin:
     image: dpage/pgadmin4:latest
     environment:
-      PGADMIN_DEFAULT_EMAIL: admin@stockpeek.local
+      PGADMIN_DEFAULT_EMAIL: admin@stockpeek.com
       PGADMIN_DEFAULT_PASSWORD: admin
     ports:
       - "5050:80"
