@@ -21,7 +21,7 @@ public class SecurityConfig {
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS))
             .authorizeHttpRequests(auth -> auth
                 .requestMatchers("/health", "/actuator/health").permitAll()
-                // JWT filter + full auth rules wired in Week 1-2
+                .requestMatchers("/api/watchlists/**").permitAll() // TODO: replace with JWT auth when auth is wired
                 .anyRequest().authenticated()
             );
         return http.build();
